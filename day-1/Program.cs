@@ -22,14 +22,11 @@ namespace day_1
             int increaseNumber = 0;
             for (int i = 1; i < report.Count(); i++)
             {
-                //if current number (report[i]) > last number (report[i - 1)])
                 if (report[i] > report[i - 1])
                 {
-                    //then add to increaseNumber
                     increaseNumber++;
                 }
             }
-            //...then return it once done
             return increaseNumber;
         }
 
@@ -39,10 +36,10 @@ namespace day_1
 
             for (int i = 1; i < report.Count() - 2; i++)
             {
-                int currentOne = report[i - 1] + report[i] + report[i + 1];
-                int nextOne = report[i] + report[i + 1] + report[i + 2];
+                int groupOne = report[i - 1] + report[i] + report[i + 1];
+                int groupTwo = report[i] + report[i + 1] + report[i + 2];
 
-                if (nextOne > currentOne)
+                if (groupTwo > groupOne)
                 {
                     increaseNumber++;
                 }

@@ -66,7 +66,7 @@ measurement.
 
 <details>
   <summary><strong><em>See result here</em></strong></summary>
-	Your puzzle answer was <strong><em>1559</em></strong>.
+	Your puzzle answer was <strong><em>1502</em></strong>.
 </details>
 
 ###--- Part Two ---
