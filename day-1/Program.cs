@@ -9,7 +9,7 @@ namespace day_1
         static void Main(string[] args)
         {
             string[] input = File.ReadAllLines(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "puzzleInput.txt"));
-            int[] report = (Array.ConvertAll(input, s => Int32.Parse(s)));
+            int[] report = Array.ConvertAll(input, s => Int32.Parse(s));
 
             Console.WriteLine("########## Day 1 2021 ##########");
             Console.WriteLine($"Part one solution: {SolvePartOne(report)}");
@@ -22,11 +22,14 @@ namespace day_1
             int increaseNumber = 0;
             for (int i = 1; i < report.Count(); i++)
             {
+                //if current number (report[i]) > last number (report[i - 1)])
                 if (report[i] > report[i - 1])
                 {
+                    //then add to increaseNumber
                     increaseNumber++;
                 }
             }
+            //...then return it once done
             return increaseNumber;
         }
 
