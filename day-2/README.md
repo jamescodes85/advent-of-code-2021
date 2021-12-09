@@ -40,7 +40,7 @@ position by your final depth?*
 
 <details>
   <summary><strong><em>See result here</em></strong></summary>
-	Your puzzle answer was <strong><em>???</em></strong>.
+	Your puzzle answer was <strong><em>1383564</em></strong>.
 </details>
 
 ### --- Part Two ---
@@ -81,5 +81,5 @@ depth?*
 
 <details>
   <summary><strong><em>See result here</em></strong></summary>
-	Your puzzle answer was <strong><em>???</em></strong>.
+	Your puzzle answer was <strong><em>1488311643</em></strong>.
 </details>

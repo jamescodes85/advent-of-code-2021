@@ -4,6 +4,13 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>day_2</RootNamespace>
+    <StartupObject>day_2.Program</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="puzzleInput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>
