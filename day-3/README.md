@@ -54,7 +54,7 @@ not binary.)
 
 <details>
   <summary><strong><em>See result here</em></strong></summary>
-	Your puzzle answer was <strong><em>???</em></strong>.
+	Your puzzle answer was <strong><em>4103154</em></strong>.
 </details>
 
 ### --- Part Two ---
