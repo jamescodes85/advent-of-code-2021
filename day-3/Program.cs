@@ -12,7 +12,7 @@ namespace day_2
 
             Console.WriteLine("########## Day 3 2021 ##########");
             Console.WriteLine($"Part one solution: {SolvePartOne(input)}");
-            //Console.WriteLine($"Part two solution: {SolvePartTwo(input)}");
+            Console.WriteLine($"Part two solution: {SolvePartTwo(input)}");
             Console.WriteLine("################################");
         }
 
@@ -27,17 +27,16 @@ namespace day_2
                 int zeros = 0;
                 foreach (string line in input)
                 {
-                    //go through 1st char for each line, then 2nd, 3rd etc.
+                    //iterate over bit positions, starting with 1st line, 1st bit, 2nd line, 1st bit etc.
                     char temp = line.ToCharArray()[i];
-                    if (temp.Equals('0'))
+                    switch (temp)
                     {
-                        //should have 5 zeros
-                        zeros++;
-                    }
-                    else
-                    {
-                        //should have 5 ones
-                        ones++;
+                        case '0':
+                            zeros++;
+                            break;
+                        case '1':
+                            ones++;
+                            break;
                     }
                 }
 
@@ -55,9 +54,47 @@ namespace day_2
             return gammaInt * epsilonInt;
         }
 
-        //private static int SolvePartTwo(string[] input)
-        //{
-        //}
+        private static int SolvePartTwo(string[] input)
+        {
+            //get 1st bit of each list item and keep only numbers selected by BIT CRITERIA; bin the rest
+            //if you only have one number left, stop and take number as the answer
+            //then iterate over the 2nd/3rd/4th bit etc. as per above
+            for (int i = 0; i < input[0].Length; i++)
+            {
+                int ones = 0;
+                int zeros = 0;
+                foreach (string line in input)
+                {
+                    //iterate over bit positions, starting with 1st line, 1st bit, 2nd line, 1st bit etc.
+                    char temp = line.ToCharArray()[i];
+                    switch (temp)
+                    {
+                        case '0':
+                            zeros++;
+                            break;
+                        case '1':
+                            ones++;
+                            break;
+                    }
+                }
+                if (zeros > ones)
+                {
+                    //remove all lines starting with 1
+                }
+                else
+                {
+                    //remove all lines starting with 0
+                }
+            }
+            //var oxygenGeneratorRating = most common value in current bit position, keeping only numbers with that bit in that position. If 0/1 are equally common, keep 1
+            return 1;
+
+            //BIT CRITERIA (step-by-step examples: https://adventofcode.com/2021/day/3)
+            
+            //co2GeneratorRating = as above but least common and if 0/1, keep 0
+
+            //lifeSupportRating = oxygenGeneratorRating (as decimal) * co2ScrubberRating (as decimal)
+        }
     }
 }
 
